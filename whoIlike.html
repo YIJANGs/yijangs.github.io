@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Do I like you?</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function N() {
+        var Youname = document.getElementById('nm').value;
+        if (Youname.includes("张琳")){
+          alert("你好！恭喜你，我喜欢你...")
+        }else {
+          alert("好吧，"+Youname+"，至少我不喜欢你，很遗憾...")
+        }
+      }
+    </script>
+    <h1>Because I am from China so my classmates are in China. So I write this web in Chinese.</h1><br> <br> <hr> <br> 我喜欢你吗？ <br><br>
+    <h4><br>
+      <input type="text" name="nm" id="nm" value="" placeholder="输入你的名字...">
+      <input type="button" name="" value="确定" onclick="N()">
+    </h4>
+  </body>
+</html>
