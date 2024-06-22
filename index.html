@@ -133,8 +133,13 @@
         }
       </style>
       <script type="text/javascript">
+      var yc = 0;
         function whoIlike(){
-          window.location.href = 'whoIlike'
+          if (yc > 5){
+          window.location.href = 'whoIlike';
+          }else{
+            yc = yc + 1;
+          }
         }
       </script>
       <div class="interestingthing">
