@@ -14,9 +14,6 @@
 
     Http.onreadystatechange = (e) => {
       console.log(Http.responseText);
-      if (document.getElementByName('isalert')[0].checked){
-        alert(Http.responseText);
-      }
     }
     start(urll);
   }
@@ -32,7 +29,7 @@
       </p>
       <input type="text" name="" id='sss' value="" placeholder="Enter any url...">
       <br>
-      <input type="radio" name="isalert" value="ALERT">
+      
       <br><input type="button" name="" value="OK" onclick="aaa()">
     </font>
   </body>
