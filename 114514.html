@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>114514</title>
+  </head>
+  <body style="background-color:black;"><font color="white">
+    <script type="text/javascript">
+      function re(num){
+        document.getElementById('text').innerHTML=num;
+      }
+      function res(){
+        var gs = "";
+        var zzz = new Array();
+        zzz[0] = 0;
+        zzz[1] = "(1-1)*4514";
+        zzz[2] = 1;
+        zzz[3] = "11/(45-1)*4";
+        zzz[4] = 2;
+        zzz[5] = '(11-4-5+1-1)';
+        zzz[6] = 3;
+        zzz[7] = "11*-4+51-4";
+        if (document.getElementById('inPut').value != ""){
+          var numbe = Number(document.getElementById('inPut').value);
+          if (numbe === 0){
+            re('(1-1)*4514')
+          }else{
+            while (numbe !== 0){
+              for (var i = zzz.length;i>=0;i=i-2){
+                if (zzz[i] <= numbe){
+                  numbe = numbe-zzz[i];
+                  if (gs == ""){
+                    gs = gs + zzz[i+1];
+                  }else{
+                    gs = gs + "+" + zzz[i+1];
+                  }
+                }
+              }
+            }
+            re(gs);
+          }
+        }else{}
+      }
+    </script>
+    <div class="" align="center">
+      <h3>
+        输入数字，转换为114514. <br>
+        <input type="text" name="" value="" background='输入数字...' id='inPut' oninput="res()">
+
+        <p id="text"></p>
+      </h3>
+    </div>
+  </font></body>
+</html>
