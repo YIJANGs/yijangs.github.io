@@ -23,7 +23,12 @@
     function n(){
       if (document.getElementById('agree').checked){
         if (document.getElementById('likeme').checked){
-          N();
+          if (document.getElementById("anhao").value.includes("曲辕犁")){
+            N();
+          }else{
+            alert("不知道我的外号的人不是我的同学");
+            window.location.href = 'https://ocfounder.github.io/';
+          }
         }else{
           alert('真的吗？')
           window.location.href = 'https://ocfounder.github.io/';
@@ -35,6 +40,7 @@
     </script>
     <h1>Because I am from China so my classmates are in China. So I write this web in Chinese.</h1><br> <br> <hr> <br> 我喜欢你吗？ <br><br>
     <h4><br>
+       <input type="text" name="nm" id="anhao" value="" placeholder="我的外号（XX犁）"><br>
       <input type="text" name="nm" id="nm" value="" placeholder="输入你的名字..."><br>
       <input type="checkbox" name="" id="likeme" value="">是否喜欢我<br>
       <textarea name="name" rows="8" cols="80" readonly="readonly">
