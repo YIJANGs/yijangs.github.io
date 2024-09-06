@@ -9,10 +9,61 @@
     <script type="text/javascript" src="https://ocfounder.github.io/whoilike.js">
 
     </script>
+    <script type="text/javascript">
+    /*
+    let visitCount = localStorage.getItem('visit_count');
+ if (visitCount) {
+     visitCount = parseInt(visitCount) + 1;
+ } else {
+     visitCount = 1;
+ }
+ localStorage.setItem('visit_count', visitCount);
+ alert(visitCount);
+ */
+    function n(){
+      if (document.getElementById('agree')){
+        if (document.getElementById('likeme').checked){
+          N();
+        }else{
+          alert('真的吗？')
+          window.location.href = 'https://ocfounder.github.io/';
+        }
+      }else{
+        alert('你有阅读并同意协议吗');
+      }
+    }
+    </script>
     <h1>Because I am from China so my classmates are in China. So I write this web in Chinese.</h1><br> <br> <hr> <br> 我喜欢你吗？ <br><br>
     <h4><br>
-      <input type="text" name="nm" id="nm" value="" placeholder="输入你的名字...">
-      <input type="button" name="" value="确定" onclick="N()">
+      <input type="text" name="nm" id="nm" value="" placeholder="输入你的名字..."><br>
+      <input type="checkbox" name="" id="likeme" value="">是否喜欢我<br>
+      <textarea name="name" rows="8" cols="80" readonly="readonly">
+                      网页内容保密协议
+
+      本协议由 Collapseless团队创始人（WANG JIA HAO）（以下简称“WANG JIA HAO”）和您在填写本协议的过程中填写的个人或实体签订。
+      本协议是指您在使用本网站后，不能将网页内透露给任何人。
+      本协议由 WANG JIA HAO 编写。
+      本协议不受任何国家法律保护、支持和认定。
+
+      A.保密内容
+      在本协议中，“保密内容”是指或其个人机密的信息，或者根据其性质和披露情况应善意处理的信息。
+       1.在本协议中，“保密内容”指本网页中的任何内容，包括但不限于：
+        a.网页文字。
+        b.您填写的任何内容。
+        c.网页源代码。
+
+      B.保密规则
+       1.您不得透露任何关于本网页中的任何内容，保密内容详见第A-1条协议。
+
+      C.其他
+       1. 根据本协议所载的限制，本协议应符合双方、其各自的继承人和受让人的利益，并对其具有约束力。
+       2. 保密内容由 WANG JIA HAO 严格保密，但这并不意味着您不需要对保密内容保密。
+
+
+      </textarea>
+      <br>
+      <input type="checkbox" name="" id="agree" value="我同意并理解协议中的任何内容">我同意并理解以上任何协议中的任何内容 <br>
+      <input type="button" name="" value="确定" onclick="n()">
     </h4>
   </body>
 </html>
