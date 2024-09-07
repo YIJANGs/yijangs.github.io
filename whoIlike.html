@@ -10,26 +10,29 @@
 
     </script>
     <script type="text/javascript">
-    /*
-    let visitCount = localStorage.getItem('visit_count');
- if (visitCount) {
-     visitCount = parseInt(visitCount) + 1;
- } else {
-     visitCount = 1;
- }
- localStorage.setItem('visit_count', visitCount);
- alert(visitCount);
- */
+    
+
+
+ 
+ 
     function n(){
+      let islike = localStorage.getItem('islike');
       if (document.getElementById('agree').checked){
         if (document.getElementById('likeme').checked){
+          if (islike) {
+            alert('你...');
+            alert("看来那个选项你不是没看见...");
+            window.location.href = 'https://ocfounder.github.io/';
+          }else{
           if (document.getElementById("anhao").value.includes("曲辕犁")){
             N();
           }else{
             alert("不知道我的外号的人不是我的同学");
             window.location.href = 'https://ocfounder.github.io/';
           }
+          }
         }else{
+          localStorage.setItem('islike', islike);
           alert('真的吗？')
           window.location.href = 'https://ocfounder.github.io/';
         }
