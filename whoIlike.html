@@ -19,23 +19,23 @@
       let islike = localStorage.getItem('islike');
       if (document.getElementById('agree').checked){
         if (document.getElementById('likeme').checked){
-          if (islike) {
-            alert('你...');
-            alert("看来那个选项你不是没看见...");
-            window.location.href = 'https://ocfounder.github.io/';
-          }else{
           if (document.getElementById("anhao").value.includes("曲辕犁")){
             N();
           }else{
             alert("不知道我的外号的人不是我的同学");
             window.location.href = 'https://ocfounder.github.io/';
           }
-          }
         }else{
+          if (islike) {
+            alert('你...');
+            alert("看来那个选项你不是没看见...");
+            window.location.href = 'https://ocfounder.github.io/';
+          }else{
           localStorage.setItem('islike', islike);
           alert('真的吗？')
           window.location.href = 'https://ocfounder.github.io/';
         }
+        ｝
       }else{
         alert('你有阅读并同意协议吗');
       }
