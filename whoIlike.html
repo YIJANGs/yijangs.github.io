@@ -20,7 +20,14 @@
       if (document.getElementById('agree').checked){
         if (document.getElementById('likeme').checked){
           if (document.getElementById("anhao").value.includes("曲辕犁")){
-            N();
+            
+            if (islike) {
+              alert("你不是已经来过了吗");
+              window.location.href = 'https://ocfounder.github.io/';
+            }else{
+              N();
+            }
+            
           }else{
             alert("不知道我的外号的人不是我的同学");
             window.location.href = 'https://ocfounder.github.io/';
