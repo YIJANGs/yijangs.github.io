@@ -10,24 +10,21 @@
 
     </script>
     <script type="text/javascript">
-    
 
-
- 
- 
     function n(){
-      let islike = localStorage.getItem('islike');
+      let islike = getCookie("islike");
       if (document.getElementById('agree').checked){
         if (document.getElementById('likeme').checked){
           if (document.getElementById("anhao").value.includes("曲辕犁")){
-            
+
             if (islike === "1") {
               alert("你不是已经来过了吗");
               window.location.href = 'https://ocfounder.github.io/';
             }else{
+              setCookie("islike",'1',30);
               N();
             }
-            
+
           }else{
             alert("不知道我的外号的人不是我的同学");
             window.location.href = 'https://ocfounder.github.io/';
@@ -38,7 +35,7 @@
             alert("看来那个选项你不是没看见...");
             window.location.href = 'https://ocfounder.github.io/';
           }else{
-          localStorage.setItem('islike', "1");
+          setCookie("islike",'1',30);
           alert('真的吗？');
           window.location.href = 'https://ocfounder.github.io/';
         }
@@ -46,7 +43,7 @@
       }else{
         alert('你有阅读并同意协议吗');
       }
-      
+
     }
     </script>
     <h1>I am from China so my classmates are in China. So I write this web in Chinese.</h1><br> <br> <hr> <br> 我喜欢你吗？ <br><br>

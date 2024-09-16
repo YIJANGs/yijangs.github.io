@@ -1,12 +1,22 @@
+function setCookie(name,value,time) {
+  var e = new Date();
+  e.setTime(e.getTime() + time*24*60*60*1000);
+  document.cookie = name + "=" + escape(value) + ";expires=" + e.toGMTString();
+}
+function getCookie(name) {
+  var a = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+  if (a != null) return unescape(a[2]); return null;
+}
+
 function N() {
   var Youname = document.getElementById('nm').value;
   if (Youname.includes("张琳")){
-    let visitCount = localStorage.getItem('visit_count');
+    let visitCount = getCookie("visitcount");
     if (visitCount) {
       alert('你已经来过了...')
       window.location.href = 'https://ocfounder.github.io/';
     } else {
-      visitCount = 1;
+      visitCount = "1";
       alert("eng...");
       alert("也许，我应该这么说...");
       alert("暗恋，暗恋，是什么？");
@@ -20,7 +30,7 @@ function N() {
       alert("这是“张琳我喜欢你”的哈希值...");
       alert("总之，这是属于你的选择。");
     }
-    localStorage.setItem('visit_count', visitCount);
+    setCookie('visitcount',visitCount,30)
 
 
 
