@@ -14,7 +14,7 @@ function N() {
     let visitCount = getCookie("visitcount");
     if (visitCount) {
       alert('你已经来过了...')
-      window.location.href = 'https://ocfounder.github.io/';
+      window.location.href = window.location.origin;
     } else {
       visitCount = "1";
       alert("eng...");

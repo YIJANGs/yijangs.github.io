@@ -19,7 +19,7 @@
 
             if (islike === "1") {
               alert("你不是已经来过了吗");
-              window.location.href = 'https://ocfounder.github.io/';
+              window.location.href = window.location.origin;
             }else{
               setCookie("islike",'1',30);
               N();
@@ -27,17 +27,17 @@
 
           }else{
             alert("不知道我的外号的人不是我的同学");
-            window.location.href = 'https://ocfounder.github.io/';
+            window.location.href = window.location.origin;
           }
         }else{
           if (islike) {
             alert('你...');
             alert("看来那个选项你不是没看见...");
-            window.location.href = 'https://ocfounder.github.io/';
+            window.location.href = window.location.origin;
           }else{
           setCookie("islike",'1',30);
           alert('真的吗？');
-          window.location.href = 'https://ocfounder.github.io/';
+          window.location.href = window.location.origin;
         }
        }
       }else{
