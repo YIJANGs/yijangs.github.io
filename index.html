@@ -56,6 +56,15 @@
         border: none;
         border-radius:15px;
       }
+      input[name=fundme]{
+        height:40px;
+        width:100px;
+        background-color:#666666;
+        color:white;
+        display: inline-block;
+        border: none;
+        border-radius:15px;
+      }
     </style>
     <script type="text/javascript">
       function team() {
@@ -157,6 +166,16 @@
           If you are my friend(classmate), you can test this to know do I like you. <br>
           This --> <input type="button" name="Ilk" value="test" onclick="whoIlike()"><br><br><hr>
         </div>
+      </div>
+      <div class="">
+        <script type="text/javascript">
+          function fund(){
+            window.location.href='fund';
+          }
+        </script>
+        <h3>Fund me</h3>
+        <input type="button" name="fundme" value="Fund me" onclick="fund()">
+        <br><br>
       </div>
     </div>
   </font></body>
