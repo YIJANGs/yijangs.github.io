@@ -38,7 +38,7 @@
       <input type="button" name="" value="OK" onclick="ok2()">
     </div>
 
-    <div id='photoWC' style='display:none;'>
+    <div id='photo' style='display:none;'>
       <hr>
       Now scan this QR in WeChat, you can fund me.<br>
       <img src="./fundwechat.png" height="200" width="200" id='imgwechat'><br>
@@ -60,7 +60,7 @@
       if (document.getElementById('1number').value<=0){
         alert('sorry the number can not <= 0.')
       }else{
-        document.getElementById('photoWC').style.display = "block";
+        document.getElementById('photo').style.display = "block";
         imgg = document.getElementById('imgwechat');
         imgg.src = './fundwechat.png';
       }
