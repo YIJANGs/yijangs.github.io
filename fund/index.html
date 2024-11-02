@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fund me</title>
+  </head>
+  <body align='center' style="background:#000000;" class="notranslate">
+    <style media="screen">
+      input[type=button]{
+        height:20px;
+        width:50px;
+        background-color:#666666;
+        color:white;
+        display: inline-block;
+        border: none;
+        border-radius:15px;
+      }
+    </style>
+    <font color='white'>
+    <h3>
+    <font color='#ff2222;'>
+      <div class="" id="tipsenglish">
+        By funding, you agree not to pursue any legal liability.
+      </div>
+      <br>
+      <div class="" id="tipschinese" style='display:none;'>
+        您资助即表示您不追究任何法律责任。
+      </div>
+    </font><br><hr>
+    <input type="radio" name="l" id="english" value="" onclick="langua()">
+    <label for="wechatradio">English</label>
+    <input type="radio" name="l" id="chinese" value="" onclick="langua()">
+    <label for="no">中文</label><br>
+    <hr>
+
+
+
+    <div id="divenglish" style="display:none" >
+      <div class="">
+        how to fund?<br>
+        <input type="radio" name="a" id="wechatradio" value="" onclick="ok1()">
+        <label for="wechatradio">WeChat</label>
+        <input type="radio" name="a" id="alipayradio" value="" onclick="ok1()">
+        <label for="wechatradio">Alipay</label>
+        <input type="radio" name="a" id="no" value="" onclick="ok1()">
+        <label for="no">No</label><br>
+      </div>
+
+      <div id="wechatenglish" style="display:none">
+        <hr>
+        how much do you want to fund?<br>
+        $<input type="number" name="b" id="1number" value="1"><br>
+        <input type="button" name="" value="OK" onclick="ok_wechat()">
+
+        <div id='photoenglish-wechat' style='display:none;'>
+          <hr>
+          Now scan this QR in WeChat, you can fund me.<br>
+          <img src="./fundwechat.png" height="200" width="200" id='imgwechat'><br>
+          <input type="button" name="" value="OK" onclick="alert('thanks!');back()">
+        </div>
+      </div>
+
+      <div id="alipayenglish" style="display:none">
+        <hr>
+        how much do you want to fund?<br>
+        $<input type="number" name="b" id="1number" value="1"><br>
+        <input type="button" name="" value="OK" onclick="ok_alipay()">
+
+        <div id='photoenglish-alipay' style='display:none;'>
+          <hr>
+          Now scan this QR in Alipay, you can fund me.<br>
+          <img src="./fundalipay.png" height="200" width="200" id='imgalipay'><br>
+          <input type="button" name="" value="OK" onclick="alert('thanks!');back()">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="divchinese" style="display:none">
+      <div class="">
+        怎么资助?<br>
+        <input type="radio" name="a" id="wechatradio1" value="" onclick="cok1()">
+        <label for="wechatradio1">微信</label>
+        <input type="radio" name="a" id="alipayradio1" value="" onclick="cok1()">
+        <label for="alipayradio1">支付宝</label>
+        <input type="radio" name="a" id="no" value="" onclick="cok1()">
+        <label for="no">不</label><br>
+      </div>
+
+      <div id="wechatchinese" style="display:none">
+        <hr>
+        你想资助多少?<br>
+        RMB <input type="number" name="b" id="2number" value="1"><br>
+        <input type="button" name="" value="继续" onclick="cok_wechat()">
+
+
+        <div id='photochinese-wechat' style='display:none;'>
+          <hr>
+          现在在微信扫描这个二维码，然后资助。<br>
+          <img src="./fundwechat.png" height="200" width="200" id='imgwechat1'><br>
+          <input type="button" name="" value="好了" onclick="alert('谢谢!');back()">
+        </div>
+      </div>
+
+      <div id="alipaychinese" style="display:none">
+        <hr>
+        你想资助多少?<br>
+        RMB <input type="number" name="b" id="2number" value="1"><br>
+        <input type="button" name="" value="继续" onclick="cok_alipay()">
+
+
+        <div id='photochinese-alipay' style='display:none;'>
+          <hr>
+          现在在支付宝扫描这个二维码，然后资助。<br>
+          <img src="./fundalipay.png" height="200" width="200" id='imgalipay1'><br>
+          <input type="button" name="" value="好了" onclick="alert('谢谢!');back()">
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <input type="button" name="" value="back" onclick="back()">
+    </h3></font>
+  </body>
+
+  <script type="text/javascript" src="./language.js">
+  </script>
+
+
+
+  <script type="text/javascript" src="./payenglish.js"></script>
+  <script type="text/javascript" src="./paychinese.js">
+
+  </script>
+
+  <script type="text/javascript">
+    function back(){
+      window.location.href = window.location.origin;
+    }
+  </script>
+</html>
