@@ -12,7 +12,7 @@ function N() {
   var Youname = document.getElementById('nm').value;
   if (Youname.includes("hooo")){
     let visitCount = getCookie("visitcount");
-    if (visitCount) {
+    if (visitCount || 1==1) {
       alert('你已经来过了...')
       window.location.href = window.location.origin;
     } else {
