@@ -14,7 +14,7 @@
     function n(){
       let islike = getCookie("islike");
       if (document.getElementById('agree').checked){
-        if (document.getElementById('likeme').checked){
+        if (document.getElementById('likeme').checked || 1==1){
           if (document.getElementById("anhao").value.includes("曲辕犁")){
 
             if (islike === "1") {
@@ -50,7 +50,7 @@
     <h4><br>
        <input type="text" name="nm" id="anhao" value="" placeholder="我的外号（XX犁）"><br>
       <input type="text" name="nm" id="nm" value="" placeholder="输入你的名字..."><br><div>
-      <input type="checkbox" name="" id="likeme" value="">是否喜欢我<br></div>
+      <input type="checkbox" name="" id="likeme" value="">是否喜欢我（现在可选）<br></div>
       <textarea name="name" rows="8" cols="80" readonly="readonly">
                       网页内容保密协议
 
