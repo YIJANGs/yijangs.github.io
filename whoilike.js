@@ -25,6 +25,6 @@ function N() {
 
 
   }else {
-    alert("尝试输入hooo");
+    alert("你可以尝试将“你的名字”改为hooo");
   }
 }
