@@ -32,11 +32,12 @@
       var TARGET = document.getElementById('sss').value;
       var pic = new Image();
       var ran = Math.floor(Math.random() * 1000);
+      var ran1 = Math.floor(Math.random() * 1000);
       //pic.src = TARGET+'?val='+ran;
       if (TARGET.includes("?")){
-        pic.src = TARGET+'&val='+ran;
+        pic.src = TARGET+'&val='+ran+"&vall="+ran1;
       }else{
-        pic.src = TARGET+'?val='+ran;
+        pic.src = TARGET+'?val='+ran+"&vall="+ran1;;
       }
 
 }
