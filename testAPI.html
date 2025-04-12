@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON Response</title>
+    <title>JSON Viewer</title>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const data = {
-            message: "Hello, this is your JSON response!",
-            status: "success",
-            timestamp: new Date().toISOString()
-            };
-            document.body.textContent = JSON.stringify(data, null, 2);
-        });
+        window.onload = () => {
+            // 定义一个默认值
+            const a = "example_value"; // 你可以修改这个值
+
+            // 构造 JSON 对象
+            const json = { a: a };
+
+            // 清空页面并显示 JSON 文本
+            document.open();
+            document.write(`<pre>${JSON.stringify(json, null, 2)}</pre>`); // 格式化 JSON
+            document.close();
+        };
     </script>
 </head>
 <body>
+    <!-- 页面加载后，内容会被 JSON 文本覆盖 -->
 </body>
 </html>
